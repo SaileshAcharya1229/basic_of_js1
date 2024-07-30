@@ -12,17 +12,17 @@
 //   const c = a + b;
 //   return c;
 // }
-// //function call
+// function call
 // const result = sum(2, 4);
 // console.log({ result });
 
-const number = Number(prompt("enter any number"));
-function square(a) {
-  const c = a * a;
-  return c;
-}
-const result = square(number);
-console.log({ result });
+// const number = Number(prompt("enter any number"));
+// function square(a) {
+//   const c = a * a;
+//   return c;
+// }
+// const result = square(number);
+// console.log({ result });
 
 //ES6
 
@@ -32,3 +32,52 @@ const squares = (x) => {
 
 const newAnswer = squares(5);
 console.log({ newAnswer });
+
+// different types of functions
+
+/*
+1. default function
+2.parameterized function
+3.arrow function
+4.closure function
+5.IIFes function
+6.recursive
+7.inline 
+8.anonymous 
+9.callback function
+10.pure function
+11.implict
+12. explict
+
+
+
+
+*/
+
+//ES5
+function sum(a, b) {
+  return a + b;
+}
+
+//ES6
+
+const sums = (a, b) => {
+  return a + b;
+};
+
+//default
+const defaultFunc = (names = "student") => {
+  console.log(`hello${names}`);
+};
+defaultFunc("sailesh ");
+defaultFunc();
+
+//parameterized function
+
+const parameterizedFunc = ({ a, b, c, d }) => {
+  console.log(a + b);
+  console.log(d - c);
+};
+parameterizedFunc({ a: 5, b: 3, d: 7, c: 8 });
+
+//
