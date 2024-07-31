@@ -66,18 +66,37 @@ const sums = (a, b) => {
 };
 
 //default
-const defaultFunc = (names = "student") => {
-  console.log(`hello${names}`);
+// const defaultFunc = (names = "student") => {
+//   console.log(`hello${names}`);
+// };
+// defaultFunc("sailesh ");
+// defaultFunc();
+
+// //parameterized function
+
+// const parameterizedFunc = ({ a, b, c, d }) => {
+//   console.log(a + b);
+//   console.log(d - c);
+// };
+// parameterizedFunc({ a: 5, b: 3, d: 7, c: 8 });
+
+//closure function
+
+const mainCounter = () => {
+  let count = 0;
+  return () => {
+    count = count + 1;
+    count = 7;
+    return count;
+  };
 };
-defaultFunc("sailesh ");
-defaultFunc();
 
-//parameterized function
+const count1 = mainCounter();
+const count2 = mainCounter();
 
-const parameterizedFunc = ({ a, b, c, d }) => {
-  console.log(a + b);
-  console.log(d - c);
-};
-parameterizedFunc({ a: 5, b: 3, d: 7, c: 8 });
+console.log("hello1" + count1());
+console.log("hello2" + count2());
+console.log(count2());
 
-//
+//5.IIFEs(Immediately Invoked Functional Expression)
+
