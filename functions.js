@@ -100,3 +100,32 @@ console.log(count2());
 
 //5.IIFEs(Immediately Invoked Functional Expression)
 
+//Devops (Database seeding)
+
+((name) => {
+  console.log(`hello ${name}`);
+})("sailesh");
+
+//recursive function
+
+//code for factorial
+const factorial = (num) => {
+  if (num === 0 || num === 1) {
+    return 1;
+  }
+  return num * factorial(num - 1);
+};
+const fact = factorial(5);
+console.log(fact);
+
+//code for multiplication table
+
+const multiplication = (num, i) => {
+  if (i > 10) {
+    return 0;
+  }
+  console.log(`${num}* ${i}= ${num * i}`);
+
+  return multiplication(num, i + 1);
+};
+multiplication(4, 1);
