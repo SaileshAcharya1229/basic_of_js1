@@ -128,4 +128,51 @@ const multiplication = (num, i) => {
 
   return multiplication(num, i + 1);
 };
+//const a = Number(prompt("enter any number"));
 multiplication(4, 1);
+
+//code for countdown
+
+const countDown = (count) => {
+  if (count === 0) {
+    return 0;
+  }
+  console.log(count);
+  return countDown(count - 1);
+};
+
+countDown(10);
+
+// 7.Inline function
+const test = () => {
+  const d = 1;
+  console.log({ d });
+};
+const d = "alpha";
+function tests() {
+  console.log("global func", { d });
+}
+test();
+tests();
+
+// 8. Anonymous function
+// (a) => {
+//   console.log(a);
+// };
+
+// 9. call back function
+const child = (age) => {
+  console.log({ age });
+};
+const parent = (AgeFunction) => {
+  const age1 = 23;
+  AgeFunction(age1);
+};
+parent(child);
+
+//10.pure function
+
+const uppercaseConvertor = (text1) => {
+  console.log(text1.toUpperCase());
+};
+uppercaseConvertor("sailesh");
