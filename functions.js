@@ -176,3 +176,13 @@ const uppercaseConvertor = (text1) => {
   console.log(text1.toUpperCase());
 };
 uppercaseConvertor("sailesh");
+
+//11.Implicit function
+const sum = (a, b) => a + b;
+sum(3, 4);
+
+//12.Explicit Function
+const sum2 = (a, b) => {
+  console.log(sums(a + b));
+};
+sum2(a, b);
