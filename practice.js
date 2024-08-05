@@ -52,19 +52,126 @@
 
 //check the number whether it is prime or composite
 
-const checker = (num) => {
-  const num1 = Number(num);
-  let isprime = true;
-  for (i = 2; i <= num1 / 2; i++) {
-    if (num1 % i === 0) {
-      isprime = false;
-      break;
+// const checker = (num) => {
+//   const num1 = Number(num);
+//   let isprime = true;
+//   for (i = 2; i <= num1 / 2; i++) {
+//     if (num1 % i === 0) {
+//       isprime = false;
+//       break;
+//     }
+//   }
+//   if (isprime) {
+//     console.log("the number is prime");
+//   } else {
+//     console.log("the number is composite");
+//   }
+// };
+// checker(11);
+
+// js function to get the number of occurence of each letter
+
+// const occuranceChecker = (text) => {
+//   //const len = text.length;
+//   for (i = 0; i <= text.length; i++) {
+//     count = 0;
+//     console.log(text[i]);
+//     for (j = 0; j < text.length; j++) {
+//       if (text[i] === text[j] && i > j) {
+//         break;
+//       }
+//       if (text[i] === text[j]) {
+//         count++;
+//       }
+//     }
+//     if (count > 0) {
+//       console.log(`${text[i]} occurence ${count} times`);
+//     }
+//   }
+//   return text;
+// };
+// occuranceChecker("helloiamsaileshacharya");
+
+//js function to print unrepeatable words
+
+// const occuranceChecker = (text) => {
+//   //const len = text.length;
+//   for (i = 0; i <= text.length; i++) {
+//     count = 0;
+//     console.log(text[i]);
+//     for (j = 0; j < text.length; j++) {
+//       if (text[i] === text[j] && i > j) {
+//         break;
+//       }
+//       if (text[i] === text[j]) {
+//         count++;
+//       }
+//     }
+//     if (count === 1) {
+//       console.log(`${text[i]} occurence ${count} times`);
+//     }
+//   }
+//   return text;
+// };
+// occuranceChecker("helloiamsaileshacharya");
+
+//write a function which can calculate square of number
+
+// const findSquare = (num) => {
+//   return num * num;
+// };
+
+// console.log(findSquare(3));
+
+//calculate compound interest
+
+// const CInterest = ({ p, t, r }) => {
+//   const i = (p * t * r) / 100;
+//   console.log(i);
+// };
+// CInterest({ p: 300, t: 2, r: 3 });
+
+//js function which can convert full name to propercase.
+
+// const ProperCase2 = (text) => {
+//   const name = text.length;
+//   let output = text[0].toUpperCase();
+
+//   for (let i = 1; i < name; i++) {
+//     if (text[i - 1] === " ") {
+//       output += text[i].toUpperCase();
+//     } else {
+//       output += text[i];
+//     }
+//   }
+//   console.log(output);
+//   return output;
+// };
+// ProperCase2("sailesh kumar acharya");
+
+//write a implict function that formats the number in comma format.
+
+const numberFormat = (num) => {
+  const len = num.toString();
+  let count = 0;
+  let output = "";
+
+  for (let i = len.length - 1; i >= 0; i--) {
+    output = len[i] + output;
+    count++;
+    if (count === 3 && i !== 0) {
+      output = "," + output;
+      count = 0;
     }
   }
-  if (isprime) {
-    console.log("the number is prime");
-  } else {
-    console.log("the number is composite");
-  }
+
+  console.log(output);
+  return output;
 };
-checker(11);
+numberFormat(10000000000);
+
+//another method
+const numberFor = (num) => {
+  return num.toLocaleString();
+};
+console.log(numberFor(1000000));
