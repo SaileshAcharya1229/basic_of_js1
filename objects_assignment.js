@@ -5,8 +5,9 @@
 
 const product1 = {
   name1: "headphone",
-  price: "89",
+  price: "101",
   isAvailable: "true",
+  //discount: "7%",
 
   FinalAmount: () => {
     let op = product1.price;
@@ -25,4 +26,6 @@ console.log(product1.FinalAmount());
 
 //update
 product1.price = product1.FinalAmount();
+product1.discount = "7%";
+console.log(product1);
 console.log(product1.price);
