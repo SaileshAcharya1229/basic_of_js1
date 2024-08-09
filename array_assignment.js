@@ -68,4 +68,64 @@ const characters = [
   },
 ];
 
-//1.get an array of all names
+// //1.get an array of all names
+// let names = characters.map((a) => a.name);
+// console.log(names);
+
+// //2.get an array of all heights
+
+// let heights = characters.map((b) => b.height);
+// console.log(heights);
+
+// //.Get an array of objects with sorting basis of height
+
+// const sortPeopleByHeight = (arr) => {
+//   let len = characters.length;
+//   for (i = 0; i < len; i++) {
+//     for (j = i + 1; j < len; j++) {
+//       if (characters[i].height > characters[j].height) {
+//         let temp = 0;
+//         temp = characters[i];
+//         characters[i] = characters[j];
+//         characters[j] = temp;
+//       }
+//     }
+//   }
+//   return characters;
+// };
+
+// const output = sortPeopleByHeight(characters);
+// console.log(output);
+
+// //3.Get an array of objects with just name and height properties
+// const nameandheight = characters.map((a) => {
+//   return {
+//     name: a.name,
+//     height: a.height,
+//   };
+// });
+// console.log(nameandheight);
+
+// //4.Get an array of all first names
+// let firstname = characters.map((a) => {
+//   return a.name.split(" ")[0];
+// });
+// console.log(firstname);
+
+//Get the total mass of all characters
+const type = typeof characters.mass;
+console.log(type);
+let sumofweight = characters.reduce((a, b) => a + Number(b.mass), 0);
+console.log(sumofweight);
+
+//
+const SumOfMass = (arr) => {
+  let length1 = characters.length;
+  let tmass = 0;
+  for (i = 0; i < length1; i++) {
+    tmass += Number(characters[i].mass);
+  }
+  return tmass;
+};
+const tmass1 = SumOfMass(characters);
+console.log(tmass1);
